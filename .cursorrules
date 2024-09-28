@@ -1,0 +1,2 @@
+Don't touch the backend. Let's focus on the frontend. I want to revamp the frontend without breaking any existing functionality.
+The code stack is React, Node.js, Express, and MongoDB. We are using javascript not typescript.
