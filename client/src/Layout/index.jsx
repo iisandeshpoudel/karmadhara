@@ -100,7 +100,7 @@ function Index({ children }) {
         } md:overflow-y-auto`}
       >
         <div className='flex items-center justify-center py-4'>
-          <Logo />
+          
         </div>
         <Menu
           theme='dark'
@@ -211,7 +211,7 @@ function Index({ children }) {
         </header>
         <main className='p-4'>{children}</main>
         <footer className='text-center bg-white py-4'>
-          Bhavya Design ©{new Date().getFullYear()} Created by bhavyabhut
+          GCES Project II Karmadhara
         </footer>
       </div>
     </div>

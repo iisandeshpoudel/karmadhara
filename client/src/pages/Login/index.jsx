@@ -6,8 +6,6 @@ import {
   EyeTwoTone,
   UserOutlined,
   LockOutlined,
-  GoogleOutlined,
-  FacebookOutlined,
 } from '@ant-design/icons';
 import axios from 'axios';
 import Logo from '../../Layout/Logo';
@@ -100,23 +98,16 @@ function SignIn(props) {
 
   return (
     <PublicLayout>
-      <div className=' p-8 bg-white rounded-lg shadow-lg text-center'>
-        <div className='flex align-middle justify-center items-center'>
-        <h1 className='text-3xl font-bold mt-4'>
+      <div className='p-8 text-center'>
+        <h1 className='text-3xl font-bold mb-6'>
           Project II - Karmadhara
         </h1>
-        <br />
-          <Logo />
-        </div>
-        <h1 className='text-3xl font-bold mt-4'>
-          Welcometo Karmadhara
-        </h1>
-        <p className='text-lg mt-2'>Please log into your account</p>
+        <p className='text-lg mb-6'>Please log into your account</p>
         <Form
           onFinish={login}
           form={form}
           layout='vertical'
-          className='space-y-4 mt-6'
+          className='space-y-4'
         >
           <Form.Item
             name='email'
@@ -148,10 +139,10 @@ function SignIn(props) {
             />
           </Form.Item>
           <div className='flex justify-between items-center'>
-            <Form.Item name='remember' valuePropName='checked'>
+            <Form.Item name='remember' valuePropName='checked' noStyle>
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
-            <Link to='/forgot-password' className='text-blue-400'>
+            <Link to='/forgot-password' className='text-blue-500'>
               Forgot Password?
             </Link>
           </div>
@@ -161,23 +152,14 @@ function SignIn(props) {
             size='large'
             block
             loading={state.loader}
-            className='bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded'
+            className='bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded'
           >
             {state.loader ? 'Logging in...' : 'Login'}
           </Button>
         </Form>
-        <Divider className='mt-8'>Or login with</Divider>
-        <div className='flex justify-center space-x-4'>
-          <Button type='default' size='large' icon={<GoogleOutlined />}>
-            Google
-          </Button>
-          <Button type='default' size='large' icon={<FacebookOutlined />}>
-            Facebook
-          </Button>
-        </div>
-        <p className='text-lg mt-8'>
+        <p className='text-sm mt-6'>
           Don't Have an Account?{' '}
-          <Link className='text-blue-400' to='/registration'>
+          <Link className='text-blue-500' to='/registration'>
             Register now
           </Link>
         </p>
